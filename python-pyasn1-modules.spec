@@ -1,7 +1,7 @@
 %define	oname	pyasn1-modules
 %define	module	asn1-modules
 
-Name:		python-%{module}
+Name:		python2-%{module}
 Version:	0.0.5
 Release:	1
 Summary:	A collection of ASN.1-based protocols modules
@@ -10,7 +10,7 @@ License:	BSD
 Group:		Development/Python
 Url:		http://sourceforge.net/projects/pyasn1/
 BuildArch:	noarch
-BuildRequires:	pythonegg(setuptools)
+BuildRequires:	python2-setuptools
 
 %description
 A collection of ASN.1 modules expressed 
@@ -22,14 +22,14 @@ Includes protocols PDUs definition
 %setup -q -n %{oname}-%{version}
 
 %build
-python setup.py build
+python2 setup.py build
 
 %install
-python setup.py install --root=%{buildroot}
+python2 setup.py install --root=%{buildroot}
 
 %files
 %doc CHANGES
 %doc LICENSE
 %doc README
-%{py_puresitedir}/pyasn1_modules/*.py*
-%{py_puresitedir}/pyasn1_modules*.egg-info
+%{py2_puresitedir}/pyasn1_modules/*.py*
+%{py2_puresitedir}/pyasn1_modules*.egg-info
