@@ -3,7 +3,7 @@
 
 Name:		python-%{module}
 Version:	0.2.1
-Release:	1
+Release:	2
 Summary:	A collection of ASN.1-based protocols modules
 Source0:	http://pypi.python.org/packages/source/p/%{oname}/%{oname}-%{version}.tar.gz
 License:	BSD
