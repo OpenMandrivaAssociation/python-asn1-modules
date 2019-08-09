@@ -1,4 +1,2 @@
-removed_sources:
-  pyasn1-modules-0.0.5.tar.gz: 108bdef1b3ca7050ff93c59e7ef7225c9c1a8b07
 sources:
-  pyasn1-modules-0.2.1.tar.gz: 93a26fe46c096d42d17b315dc3b48f8086e5750c
+  pyasn1-modules-0.2.6.tar.gz: 673f12b6d0503e57215af9a788ec87d6b8848d81
