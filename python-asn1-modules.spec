@@ -27,8 +27,5 @@ python3 setup.py build
 python3 setup.py install --root=%{buildroot}
 
 %files
-%doc python3/CHANGES.txt
-%doc python3/LICENSE.txt
-%doc python3/README.md
 %{py3_puresitedir}/pyasn1_modules/*.py*
 %{py3_puresitedir}/pyasn1_modules*.egg-info
