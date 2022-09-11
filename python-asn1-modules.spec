@@ -2,8 +2,8 @@
 %define	module	asn1-modules
 
 Name:		python-%{module}
-Version:	0.2.6
-Release:	2
+Version:	0.2.8
+Release:	1
 Summary:	A collection of ASN.1-based protocols modules
 Source0:	https://pypi.python.org/packages/source/p/%{oname}/%{oname}-%{version}.tar.gz
 License:	BSD
@@ -53,7 +53,6 @@ popd
 %doc python3/CHANGES.txt
 %doc python3/LICENSE.txt
 %doc python3/README.md
-%{py3_puresitedir}/pyasn1_modules/__pycache__
 %{py3_puresitedir}/pyasn1_modules/*.py*
 %{py3_puresitedir}/pyasn1_modules*.egg-info
 
