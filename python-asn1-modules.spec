@@ -10,7 +10,6 @@ License:	BSD
 Group:		Development/Python
 Url:		http://github.com/etingof/pyasn1-modules
 BuildArch:	noarch
-BuildRequires:	python2-setuptools
 BuildRequires:	python-setuptools
 
 %description
@@ -19,35 +18,13 @@ in form of pyasn1 classes.
 Includes protocols PDUs definition 
 (SNMP, LDAP etc.) and various data structures (X.509, PKCS etc.).
 
-%package -n python2-%{module}
-Summary:        Python 2.x library for asn1-modules
-Group:          Development/Python
-
-%description -n python2-%{module}
-Python 2.x library for asn1-modules
-
 %prep
 %setup -q -n %{oname}-%{version}
-mkdir python2
-mv `ls |grep -v python2` python2
-cp -a python2 python3
-
 %build
-pushd python2
-python2 setup.py build
-popd
-pushd python3
 python3 setup.py build
-popd
 
 %install
-pushd python2
-python2 setup.py install --root=%{buildroot}
-popd
-
-pushd python3
 python3 setup.py install --root=%{buildroot}
-popd
 
 %files
 %doc python3/CHANGES.txt
@@ -55,10 +32,3 @@ popd
 %doc python3/README.md
 %{py3_puresitedir}/pyasn1_modules/*.py*
 %{py3_puresitedir}/pyasn1_modules*.egg-info
-
-%files -n python2-%{module}
-%doc python2/CHANGES.txt
-%doc python2/LICENSE.txt
-%doc python2/README.md
-%{py2_puresitedir}/pyasn1_modules/*.py*
-%{py2_puresitedir}/pyasn1_modules*.egg-info
