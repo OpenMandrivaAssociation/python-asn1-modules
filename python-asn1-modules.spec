@@ -8,7 +8,7 @@ Summary:	A collection of ASN.1-based protocols modules
 Source0:	https://pypi.python.org/packages/source/p/%{oname}/%{oname}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
-Url:		http://github.com/etingof/pyasn1-modules
+Url:		https://github.com/etingof/pyasn1-modules
 BuildArch:	noarch
 BuildRequires:	python-setuptools
 
